@@ -69,7 +69,7 @@ final class MailChimpSubscriber
 
     private function subscribeEmail($email)
     {
-        $json = $this->getJSON($email);
+        $json = json_encode($this->getJSON($email));
 
         $ch = curl_init($this->getURL($email));
 
@@ -94,7 +94,7 @@ final class MailChimpSubscriber
     {
         return [
             'email_address' => $email,
-            'status'        => 'cleaned'
+            'status'        => 'subscribed'
         ];
     }
 
