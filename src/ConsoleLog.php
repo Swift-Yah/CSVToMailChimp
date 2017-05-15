@@ -11,9 +11,9 @@ include_once 'Logger.php';
  */
 final class ConsoleLog implements Logger
 {
-    private const RED = "\033[31m%s \n";
-    private const GREEN = "\033[32m%s \n";
-    private const YELLOW = "\033[33m%s \n";
+    private const RED = "\033[31m%s \e[0m\n"; 
+    private const GREEN = "\033[32m%s \e[0m\n"; 
+    private const YELLOW = "\033[33m%s \e[0m\n"; 
 
     function error(string $message)
     {
